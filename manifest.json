@@ -1,16 +1,22 @@
 {
-	"manifest_version": 3,
-	"name": "My Window Alert Extension",
+	"name": "Random Content Extension",
 	"version": "1.0",
-	"description": "Alert items from an array on new window open",
-	"permissions": ["tabs"],
+	"description": "Displays random content in an alert when opening a new tab.",
 	"background": {
-		"service_worker": "background.js"
+		"scripts": ["background.js"],
+		"persistent": false
 	},
-	"action": {
-		"default_popup": "popup.html"
+	"permissions": ["tabs"],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "icon16.png",
+			"48": "icon48.png",
+			"128": "icon128.png"
+		}
 	},
 	"icons": {
 		"48": "logo.png"
-	}
+	},
+	"manifest_version": 2
 }
